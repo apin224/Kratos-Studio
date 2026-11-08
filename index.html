@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KRATOS STUDIO</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HALAMAN AWAL -->
+    <section id="welcome" class="page active">
+
+        <img src="c:\Users\ASUS\Downloads\logo_transparan.png" class="logo">
+
+        <h1>SELAMAT DATANG</h1>
+
+        <p>Selamat datang di KRATOS STUDIO</p>
+
+        <button onclick="showPage('menu')">MULAI</button>
+
+    </section>
+
+
+    <!-- MENU UTAMA -->
+    <section id="menu" class="page">
+
+        <h1>KRATOS STUDIO</h1>
+        <p>Silakan pilih menu</p>
+
+        <div class="menu-container">
+
+            <button onclick="showPage('member')">
+                MEMBER
+            </button>
+
+            <button onclick="showPage('photo')">
+                PHOTO
+            </button>
+
+        </div>
+
+        <button class="back" onclick="showPage('welcome')">
+            KEMBALI
+        </button>
+
+    </section>
+
+
+    <!-- HALAMAN MEMBER -->
+    <section id="member" class="page">
+
+        <h1>DAFTAR MEMBER</h1>
+
+        <div class="content-box">
+            <h2>Member 1</h2>
+            <p>vicko gahar</p>
+        </div>
+
+        <div class="content-box">
+            <h2>Member 2</h2>
+            <p>jai rodok rodok</p>
+        </div>
+
+        <button class="back" onclick="showPage('menu')">
+            KEMBALI
+        </button>
+
+    </section>
+
+
+    <!-- HALAMAN PHOTO -->
+    <section id="photo" class="page">
+
+        <h1>GALERI PHOTO</h1>
+
+        <div class="photo-container">
+            <img src="c:\Users\ASUS\Downloads\tidore dan maitara.png" alt="Foto 1">
+            <img src="" alt="Foto 2">
+        </div>
+
+        <button class="back" onclick="showPage('menu')">
+            KEMBALI
+        </button>
+
+    </section>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        function showPage(pageId) {
+
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+
+            document.getElementById(pageId).classList.add('active');
+
+        }
+
+    </script>
+
+</body>
+</html>
